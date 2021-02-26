@@ -10,7 +10,8 @@ This project is an application based on the Star Wars saga. The user will have a
 * Fetch API <br>
 * SWAPI The Star Wars API <br>
 * Star Wars Quote API <br>
-* Json Server
+* Json Server <br>
+* Sweetalert2 lib
 
 <hr>
 
