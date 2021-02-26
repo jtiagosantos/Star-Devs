@@ -1,0 +1,376 @@
+/* Global ================ */
+:root {
+  --yellow: #DCA500;
+  --yellow-light: #FFBF00;
+  --grey: #333;
+  --white: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*========================*/
+
+body {
+  background: url('../img/bg.jpg');
+  padding: 2%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Texts ================ */
+h1, h2, span, p {
+  font-family: 'Nunito', sans-serif;
+  color: var(--white);
+}
+/*======================= */
+
+/* Header ================ */
+header {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  color: var(--yellow-light);
+  font-weight: 200;
+  font-size: 4em;
+}
+
+header .image {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 20px;
+}
+
+header img {
+  width: 100%;
+}
+
+header .image:hover {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+/*========================*/
+
+/* Cards ================ */
+main .cards-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  margin-top: 5%;
+}
+
+main .cards-main .card-container {
+  width: 27%;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  transition: 0.3s ease-in-out;
+}
+
+main .cards-main .card-container:hover {
+  margin-top: -3%;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 5px 3px #999;
+}
+
+main .cards-main .card-container .card-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main .cards-main .card-container .card-main span {
+  color: var(--grey);
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+main .cards-main .card-container .card-main h2 {
+  color: var(--yellow-light);
+  font-size: 2em;
+}
+/*============================*/
+
+/* Phrases ================ */
+main .phrases-container {
+  width: 100%;
+  margin-top: 8%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+main .phrases-container button {
+  width: 25%;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+
+  font-size: 1.7em;
+  font-weight: 600;
+
+  background-color: var(--yellow);
+  color: var(--white);
+
+  transition: 0.3s ease-in-out;
+}
+
+main .phrases-container button:hover {
+  border-radius: 2rem;
+  color: var(--yellow);
+  background-color: var(--white);
+}
+
+main .phrases-container p {
+  text-align: center;
+  width: 75%;
+  font-size: 2em;
+  font-weight: 700;
+  margin-top: 4%;
+
+  transition: 0.1s ease-in;
+}
+
+main .phrases-container p:hover {
+  opacity: 0.7;
+}
+/*===============================*/
+
+.button-save-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Container que segura o botão de salvar e o texto de adicionando*/
+.save-icon {
+  display: none;
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
+
+.save-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.save-icon img:hover {
+  cursor: pointer;
+}
+
+.save-icon span {
+  display: none;
+  width: 220px;
+  font-size: 18px;
+}
+/*=============================*/
+
+/*Modal de frases favoritas*/
+.modal-phrases {
+  width: 40vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 100vw;
+  background: lightgray;
+  padding: 10px;
+  transition: left 0.8s linear;
+  background: linear-gradient(rgba(0,0,0,0.5), rgb(0, 0, 0) 100%), url('../img/bg-modal.jpg');
+  border-left: 3px solid rgb(48, 47, 47);
+  overflow-y: auto;
+}
+
+.modal-phrases i {
+  color: var(--yellow-light);
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.modal-phrases .close {
+  position: absolute;
+  right: 0;
+  color: rgb(223, 28, 28)
+}
+
+.modal-phrases .close:hover {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.modal-phrases hr {
+  margin-top: 10px;
+  border-color: rgb(219, 215, 215);
+}
+
+.phrases-wrapper {
+  height: 450px;
+  margin-top: 20px;
+  line-height: 30px;
+  font-size: 15px;
+  color: white;
+  font-family: "Trebuchet MS";
+  overflow-y: auto;
+}
+
+.phrases-wrapper h3 {
+  margin-bottom: 10px;
+}
+/*=============================*/
+
+/*======Barra de rolagem======*/
+::-webkit-scrollbar {
+  width: 6px;
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #353434;
+  border-radius: 5px;
+}
+/*=============================*/
+
+/*Container que segura os componentes de deletar frases*/
+.delete-wrapper {
+  position: absolute;
+  bottom: 20px;
+}
+
+.delete-wrapper span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.input-button-area {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.input-button-area input,
+.input-button-area button {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-button-area input {
+  width: 80px;
+  height: 35px;
+  margin-right: 10px;
+  padding-left: 5px;
+  font-size: 20px;
+}
+
+.input-button-area button {
+  height: 35px;
+  padding: 0 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--yellow);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.input-button-area button:hover {
+  color: var(--yellow);
+  background: var(--white);
+}
+
+.input-button-area span {
+  font-size: 15px;
+  margin-left: 15px;
+  color: red;
+  display: none;
+}
+
+.input-button-area .text-loading {
+  color: var(--white)
+}
+/*=================================================*/
+
+/*Animação do texto de carregamento das frases ==========*/
+.phrases-container .loading {
+  color: white;
+  display: none;
+  margin-top: -5px;
+  font-size: 10px;
+}
+
+.loading,
+.loading:before,
+.loading:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loading {
+  color: #ffffff;
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loading:before,
+.loading:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loading:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loading:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+/*================================================*/
