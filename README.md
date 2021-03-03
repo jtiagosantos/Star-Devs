@@ -8,7 +8,7 @@ This project is an application based on the Star Wars saga. The user will have a
 
 :pushpin: CSS3
 
-:pushpin: Vanilla Javascript
+:pushpin: Vanilla JavaScript
 
 :pushpin: Fetch API 
 
